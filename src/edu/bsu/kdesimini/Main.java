@@ -1,6 +1,5 @@
 package edu.bsu.kdesimini;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
 
@@ -18,13 +17,16 @@ public class Main {
 		ArrayList picture2Data = imageData.fileIO(path1);
 
 		Compare comparator = new Compare();
-		System.out.println(comparator.doComparison(picture1Data, picture2Data));
 		Boolean result = comparator.doComparison(picture1Data, picture2Data);
 
 		if (result.equals(true)){
+			System.out.println("***********************");
 			System.out.println("The images are a match!");
+			System.out.println("***********************");
 		}else{
+			System.out.println("***************************");
 			System.out.println("The images are NOT a match!");
+			System.out.println("***************************");
 		}
 
 
